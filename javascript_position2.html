@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        function addItems() {
+            var items = ['Apache','Nginx','Lighty'];
+            var localDoc = document;
+            var node = localDoc.getElementById('webservers');
+            var length = items.length;
+            var li = '';
+            for(var i = 0; i < length;i++) {
+                li = document.createElement('li');
+                li.innerHTML = items[i];
+                node.appendChild(li);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="main">
+    <h3>Technology List</h3>
+    <ul id="techlist">
+        <li>Javascript</li>
+        <li>CSS</li>
+        <li>Images</li>
+        <li>PHP</li>
+    </ul>
+    <ul id="webservers"></ul>
+</div>
+<script type="text/javascript">
+    addItems();
+</script>
+</body>
+</html>

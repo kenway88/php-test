@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="application/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="application/javascript" src="js/jquery.validate.js"></script>
+</head>
+<body>
+<div id="main">
+    <h3>Technology List</h3>
+    <ul id="techlist">
+        <li>Javascript</li>
+        <li>CSS</li>
+        <li>Images</li>
+        <li>PHP</li>s
+    </ul>
+    <ul id="webservers"></ul>
+    <form id="testForm">
+        <input name="file" type="text">
+        <input type="submit">
+    </form>
+</div>
+<script type="text/javascript">
+    $('#testForm').validate({
+        rules:{
+            file:'required'
+        },
+        errorPlacement:function (error,element) {
+            console.log(error);
+            console.log(element);
+            console.log(element.parent());
+            error.appendTo(element.parent());
+        }
+    });
+    function addItems() {
+        var items = ['Apache','Nginx','Lighty'];
+        var localDoc = document;
+        var node = localDoc.getElementById('webservers');
+        var length = items.length;
+        var li = '';
+        for(var i = 0; i < length;i++) {
+            li = localDoc.createElement('li');
+            li.innerHTML = items[i];
+            node.appendChild(li);
+        }
+    }
+    addItems();
+</script>
+</body>
+</html>

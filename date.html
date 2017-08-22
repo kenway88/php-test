@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="main">
+    <h3>Technology List</h3>
+    <ul id="techlist">
+        <li>Javascript</li>
+        <li>CSS</li>
+        <li>Images</li>
+        <li>PHP</li>s
+    </ul>
+    <ul id="webservers"></ul>
+    <form id="testForm">
+        <input name="file" type="text">
+        <input type="submit">
+    </form>
+</div>
+<script type="text/javascript">
+var bbb = {
+ i: '10',
+ toString: function() {
+  console.log('toString');
+  return this.i;
+ },
+ valueOf: function() {
+  console.log('valueOf');
+  return this.i;
+ }
+}
+
+alert(bbb);// 10 toString
+alert(+bbb); // 10 valueOf
+alert(''+bbb); // 10 valueOf
+alert(String(bbb)); // 10 toString
+alert(Number(bbb)); // 10 valueOf
+alert(bbb == '10'); // true valueOf
+alert(bbb === '10'); // false
+//    var now = new Date();
+//    console.log(now.valueOf());
+//    console.log(now.toString());
+
+</script>
+</body>
+</html>

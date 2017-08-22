@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="application/javascript" src="js/jquery-1.11.1.js"></script>
+</head>
+<body>
+<script type="application/javascript">
+var arr = [9,2,4,5,3,7];
+//var arr = new Array;
+arr['one'] = 1;
+arr['two'] = 2;
+console.log(arr.length);
+var greater5 = arr.every(function(e,i,a){
+    return e>5
+}); //是否大于5
+var smaller10 = arr.every(function(e,i,a){
+    return e<10
+}); //是否小于10
+//alert([greater5,smaller10])
+    var reduce = arr.reduce(function (item,next) {
+        console.log(item);
+        return item*next;
+    })
+</script>
+</body>
+</html>
