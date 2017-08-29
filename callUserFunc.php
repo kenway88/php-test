@@ -24,6 +24,11 @@ class A
     {
         echo $a.$b;
     }
+
+//    public function __call($name, $arguments)
+//    {
+//        echo 'this is call';
+//    }
 }
 $a = new A();
 call_user_func([$a,'sayHello']);
@@ -33,3 +38,6 @@ echo '<br>';
 call_user_func([$a,'sayMore'],'这是a','这是b');
 echo '<br>';
 var_dump(call_user_func('ord','a'));
+echo '<br>';
+var_dump(is_callable([$a,'sayHi']));
+var_dump(call_user_func([$a,'sayHi']));
