@@ -12,6 +12,7 @@
  * 1. 触发__get()和__set()后，无论原来为何值，只能获得__get()的返回值;无论被赋予什么值，只能通过__set()
  * 方法内部赋值
  * 2. __set()若对未定义属性进行赋值，则未定义属性将变为动态属性，下次访问该属性将不再触发
+ * 3. 属性只声明不赋值也算定义，这种属性拥有默认值null
  *
  *
  * Class A
@@ -20,10 +21,10 @@ class A {
     public $a = 1;
 //    private $c = '我是原值';
 //    public $c = '我是原值';
-//    private $b;
+    public $b;
     public function __construct()
     {
-        $this->b='这是b的值';
+//        $this->b='这是b的值';
         var_dump($this->b) ;
         var_dump($this->b) ;
     }
