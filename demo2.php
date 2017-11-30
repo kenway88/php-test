@@ -1,27 +1,27 @@
 <?php
-//Ö¸¶¨Í¼Æ¬Â·¾¶
+//æŒ‡å®šå›¾ç‰‡è·¯å¾„
 $src = 'helloweba.jpeg';
-//»ñÈ¡Í¼Æ¬ÐÅÏ¢
+//èŽ·å–å›¾ç‰‡ä¿¡æ¯
 $info = getimagesize($src);
-//»ñÈ¡Í¼Æ¬À©Õ¹Ãû
+//èŽ·å–å›¾ç‰‡æ‰©å±•å
 $type = image_type_to_extension($info[2],false);
-//¶¯Ì¬µÄ°ÑÍ¼Æ¬µ¼ÈëÄÚ´æÖÐ
+//åŠ¨æ€çš„æŠŠå›¾ç‰‡å¯¼å…¥å†…å­˜ä¸­
 $fun = "imagecreatefrom{$type}";
 $image = $fun('helloweba.jpeg');
-//Ö¸¶¨×ÖÌåÑÕÉ«
+//æŒ‡å®šå­—ä½“é¢œè‰²
 $col = imagecolorallocatealpha($image,0,0,0,0);
 var_dump($col);
 die;
-//Ö¸¶¨×ÖÌåÄÚÈÝ
+//æŒ‡å®šå­—ä½“å†…å®¹
 $content = 'helloworld';
-//¸øÍ¼Æ¬Ìí¼ÓÎÄ×Ö
+//ç»™å›¾ç‰‡æ·»åŠ æ–‡å­—
 imagestring($image,5,20,70,$content,$col);
-//Ö¸¶¨ÊäÈëÀàÐÍ
+//æŒ‡å®šè¾“å…¥ç±»åž‹
 //header('Content-type:image/png');
-//¶¯Ì¬µÄÊä³öÍ¼Æ¬µ½ä¯ÀÀÆ÷ÖÐ
+//åŠ¨æ€çš„è¾“å‡ºå›¾ç‰‡åˆ°æµè§ˆå™¨ä¸­
 //$func = "image{$type}";
 //$func($image);
 imagepng($image,'helloweba.png');
-//Ïú»ÙÍ¼Æ¬
+//é”€æ¯å›¾ç‰‡
 imagedestroy($image);
 echo '<img src="helloweba.png">';
