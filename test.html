@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <input type="number" id="kkkk" >
 </head>
 <body>
 <p>22222</p>
 <img src="/1.jpg">
 </body>
+<script type="application/javascript" src="js/jquery-1.11.1.js"></script>
+<script>
+    $('#kkkk').on('keyup',function () {
+        var a = this.value;
+        if(/^\d+(.\d)?$/.test(a)){
+            console.log('h');
+        }else {
+            this.value='';
+        }
+    })
+</script>
 </html>
