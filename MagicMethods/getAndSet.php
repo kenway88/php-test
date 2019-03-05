@@ -13,6 +13,7 @@
  * 方法内部赋值
  * 2. __set()若对未定义属性进行赋值，则未定义属性将变为动态属性，下次访问该属性将不再触发
  * 3. 属性只声明不赋值也算定义，这种属性拥有默认值null
+ * 4. return $object->property 这个语句并不触发__get()方法
  *
  *
  * Class A
@@ -37,7 +38,8 @@ class A {
 
     public function __get($name)
     {
-        echo 1111;
+        $this->d = 2;
+        return $this->d;
 //        return '';
     }
 
@@ -48,7 +50,9 @@ class A {
 
 }
 $b = new A();
-var_dump($b->b);
+echo $b->c;
+var_dump($b);
+//var_dump($b->b);
 //$b->say();
 //$b->c='我被赋值';
 //$b->say();

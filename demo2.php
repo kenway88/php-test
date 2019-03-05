@@ -1,4 +1,7 @@
 <?php
+echo date('Y-m-d H:i:s',1512714586);
+die;
+
 //指定图片路径
 $src = 'helloweba.jpeg';
 //获取图片信息
