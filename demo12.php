@@ -1,10 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: T092
- * Date: 2017/3/17
- * Time: 14:35
- */
-echo E_ALL.'<br>';
-echo E_STRICT.'<br>';
-echo E_ALL|E_STRICT;
+
+class A
+{
+    public $type = 1;
+}
+$a = new A();
+//类型的赋值是引用类型的赋值
+$b = $a;
+$b->type = 2;
+echo $a->type;
