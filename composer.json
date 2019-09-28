@@ -1,0 +1,18 @@
+{
+    "name": "ken/testunit",
+    "authors": [
+        {
+            "name": "ken",
+            "email": "2281230070@qq.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
